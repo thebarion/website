@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - ZANIA Auto Parts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+                    <!-- REPLACE THIS WITH YOUR ACTUAL LOGO -->
+                    <div class="brand-logo">
+                        <img src="assets/only draw.svg" alt="Company Logo" >
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">ZANIA</span>
+                        <span class="brand-subtitle">AUTO PARTS</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html#home" class="nav-link" data-section="home">Home</a>
+                <a href="index.html#about" class="nav-link" data-section="about">About</a>
+                <a href="catalog.html" class="nav-link active" data-section="catalog">Catalog</a>
+                <a href="index.html#contact" class="nav-link" data-section="contact">Contact Us</a>
+                
+                <!-- Social Icons -->
+                <div class="social-nav-icons">
+                    <a href="https://facebook.com/zaniaautoparts" target="_blank" class="social-nav-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rabah-azzoug-a7461a201/?originalSubdomain=es" target="_blank" class="social-nav-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html#home" class="mobile-nav-link" data-section="home">Home</a>
+            <a href="index.html#about" class="mobile-nav-link" data-section="about">About</a>
+            <a href="catalog.html" class="mobile-nav-link active" data-section="catalog">Catalog</a>
+            <a href="index.html#contact" class="mobile-nav-link" data-section="contact">Contact Us</a>
+            
+            <!-- Mobile Social Icons -->
+            <div class="mobile-social-icons">
+                <a href="https://facebook.com/zaniaautoparts" target="_blank" class="mobile-social-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rabah-azzoug-a7461a201/?originalSubdomain=es" target="_blank" class="mobile-social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Catalog Hero Section -->
+    <section class="catalog-hero">
+        <div class="container">
+            <div class="catalog-hero-content">
+                <h1 class="catalog-hero-title">Our Auto Parts Catalog</h1>
+                <p class="catalog-hero-description">
+                    Discover our comprehensive selection of premium automotive parts and components. 
+                    From engine parts to electrical components, we have everything you need.
+                </p>
+                
+                <!-- Search and Filter Bar -->
+                <div class="catalog-search-bar">
+                    <div class="search-input-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="catalogSearch" placeholder="Search parts..." class="search-input">
+                    </div>
+                    <select id="categoryFilter" class="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="engine">Engine Parts</option>
+                        <option value="brakes">Brake System</option>
+                        <option value="suspension">Suspension</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="filters">Filters</option>
+                        <option value="cooling">Cooling System</option>
+                        <option value="transmission">Transmission</option>
+                        <option value="exterior">Exterior Parts</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Grid Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All Parts</button>
+                <button class="category-tab" data-category="engine">Engine</button>
+                <button class="category-tab" data-category="brakes">Brakes</button>
+                <button class="category-tab" data-category="suspension">Suspension</button>
+                <button class="category-tab" data-category="electrical">Electrical</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1: Engine Oil Filter -->
+                <div class="product-card" data-category="engine">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/one.jpg" alt="Premium Engine Oil Filter" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-filter product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-filter product-icon"></i>
+                        </div>
+                        <div class="product-badge">Premium</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Engine Oil Filter</h3>
+                        <p class="product-description">High-performance oil filter designed for maximum engine protection. Compatible with most vehicle models. Advanced filtration technology ensures optimal engine performance.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">OEM Quality</span>
+                            <span class="feature-tag">2 Year Warranty</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2: Brake Pads Set -->
+                <div class="product-card" data-category="brakes">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/tow.jpg" alt="Ceramic Brake Pads Set" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-circle-notch product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-circle-notch product-icon"></i>
+                        </div>
+                        <div class="product-badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ceramic Brake Pads Set</h3>
+                        <p class="product-description">Premium ceramic brake pads offering superior stopping power and reduced brake dust. Quiet operation with extended pad life for enhanced safety and performance.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Low Noise</span>
+                            <span class="feature-tag">Long Lasting</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3: Air Suspension Strut -->
+                <div class="product-card" data-category="suspension">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/three.jpg" alt="Air Suspension Strut" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-arrows-alt-v product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-arrows-alt-v product-icon"></i>
+                        </div>
+                        <div class="product-badge">Professional</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Air Suspension Strut</h3>
+                        <p class="product-description">Heavy-duty air suspension strut engineered for smooth ride comfort and superior handling. Compatible with luxury and performance vehicles requiring advanced suspension systems.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Heavy Duty</span>
+                            <span class="feature-tag">Smooth Ride</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4: LED Headlight Bulbs -->
+                <div class="product-card" data-category="electrical">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/four.jpg" alt="LED Headlight Bulbs" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-lightbulb product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-lightbulb product-icon"></i>
+                        </div>
+                        <div class="product-badge">Energy Efficient</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">LED Headlight Bulbs</h3>
+                        <p class="product-description">Ultra-bright LED headlight bulbs with 50,000+ hour lifespan. Superior illumination with low power consumption. Easy plug-and-play installation for most vehicles.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">50K+ Hours</span>
+                            <span class="feature-tag">Plug & Play</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5: Turbocharger Assembly -->
+                <div class="product-card" data-category="engine">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/five.jpg" alt="Turbocharger Assembly" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-cog product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-cog product-icon"></i>
+                        </div>
+                        <div class="product-badge">High Performance</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Turbocharger Assembly</h3>
+                        <p class="product-description">Complete turbocharger assembly for enhanced engine performance and fuel efficiency. Precision-engineered with balanced rotating assembly for reliable boost delivery.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Complete Kit</span>
+                            <span class="feature-tag">Balanced</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6: Brake Disc Rotors -->
+                <div class="product-card" data-category="brakes">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/six.jpg" alt="Ventilated Brake Disc Rotors" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-compact-disc product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-compact-disc product-icon"></i>
+                        </div>
+                        <div class="product-badge">Ventilated</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Ventilated Brake Disc Rotors</h3>
+                        <p class="product-description">High-quality ventilated brake rotors for superior heat dissipation and consistent braking performance. Precision-machined for perfect fit and optimal brake pad contact.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Heat Resistant</span>
+                            <span class="feature-tag">Precision Made</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7: Shock Absorbers -->
+                <div class="product-card" data-category="suspension">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/seven.jpg" alt="Gas Shock Absorbers" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-compress-alt product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-compress-alt product-icon"></i>
+                        </div>
+                        <div class="product-badge">Gas Filled</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gas Shock Absorbers</h3>
+                        <p class="product-description">Premium gas-filled shock absorbers providing excellent ride control and stability. Advanced monotube design ensures consistent damping performance in all conditions.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Monotube</span>
+                            <span class="feature-tag">All Weather</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8: Alternator -->
+                <div class="product-card" data-category="electrical">
+                    <div class="product-image-container">
+                        <!-- REPLACE THIS PLACEHOLDER WITH YOUR ACTUAL PRODUCT IMAGE -->
+                        <img src="assets/catalog/eight.jpg" alt="High Output Alternator" class="product-image">
+                        <!-- ADD PRODUCT ICON HERE - Example: <i class="fas fa-bolt product-icon"></i> -->
+                        <div class="product-icon-container">
+                            <i class="fas fa-bolt product-icon"></i>
+                        </div>
+                        <div class="product-badge">High Output</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">High Output Alternator</h3>
+                        <p class="product-description">Powerful alternator with enhanced charging capacity for modern vehicles with high electrical demands. Reliable power generation with improved efficiency and durability.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">160A Output</span>
+                            <span class="feature-tag">Efficient</span>
+                        </div>
+                        <button class="product-btn">
+                            <i class="fas fa-info-circle"></i>
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-secondary load-more-btn">
+                    <i class="fas fa-plus"></i>
+                    Load More Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="catalog-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Need Help Finding the Right Part?</h2>
+                <p class="cta-description">
+                    Our expert team is ready to assist you in finding the perfect automotive parts for your vehicle. 
+                    Contact us for personalized recommendations and technical support.
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#contact" class="btn btn-primary">Contact Our Experts</a>
+                    <button class="btn btn-secondary" onclick="window.open('tel:+15551234567')">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-name">ZANIA</span>
+                        <span class="brand-subtitle">AUTO PARTS</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for premium automotive parts and components. 
+                        Quality you can count on, service you can trust.
+                    </p>
+                    
+                    <!-- Contact Info -->
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Auto Parts Avenue, Your City</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@zaniaautoparts.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="catalog.html">Auto Parts</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Stay Updated</h3>
+                    <p class="newsletter-description">
+                        Subscribe to our newsletter for the latest parts and promotions.
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="button" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        © 2024 ZANIA Auto Parts. All rights reserved.
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

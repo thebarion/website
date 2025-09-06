@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZANIA Auto Parts - Premium Automotive Components</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <!-- REPLACE THIS WITH YOUR ACTUAL LOGO -->
+                <div class="brand-logo">
+                    <img src="assets/only draw.svg" alt="Company Logo" >
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">ZANIA</span>
+                    <span class="brand-subtitle">ATLANTIC</span>
+                </div>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="catalog.html" class="nav-link" data-section="catalog">Catalog</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact Us</a>
+                
+                <!-- Social Icons -->
+                <div class="social-nav-icons">
+                    <a href="https://facebook.com/zaniaautoparts" target="_blank" class="social-nav-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rabah-azzoug-a7461a201/?originalSubdomain=es" target="_blank" class="social-nav-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link" data-section="home">Home</a>
+            <a href="#about" class="mobile-nav-link" data-section="about">About</a>
+            <a href="catalog.html" class="mobile-nav-link" data-section="catalog">Catalog</a>
+            <a href="#contact" class="mobile-nav-link" data-section="contact">Contact Us</a>
+            
+            <!-- Mobile Social Icons -->
+            <div class="mobile-social-icons">
+                <a href="https://facebook.com/zaniaautoparts" target="_blank" class="mobile-social-link">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.linkedin.com/in/rabah-azzoug-a7461a201/?originalSubdomain=es" target="_blank" class="mobile-social-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Premium Auto Parts for Every Vehicle</h1>
+                    <p class="hero-description">
+                        Reliable auto parts for cars and trucks, distributed globally with a commitment to excellence.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('about')">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary" onclick="window.location.href='catalog.html'">View Catalog</button>
+                    </div>
+                    
+                    <!-- Features -->
+                    <div class="hero-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-wrench"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Quality Parts</h3>
+                                <p>OEM Standard</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Warranty</h3>
+                                <p>2 Year Coverage</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Fast Delivery</h3>
+                                <p>Quick Shiping</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-container">
+                        <!-- Image Slider Container -->
+                        <div class="hero-slider" id="heroSlider">
+                            <div class="slider-track" id="sliderTrack">
+                                <!-- Slide 1: Auto Parts -->
+                                <div class="slide active">
+                                    <!-- REPLACE THESE PLACEHOLDER IMAGES WITH YOUR ACTUAL IMAGES -->
+                                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop" alt="Premium Auto Parts Collection" class="hero-img">
+                                </div>
+                                <!-- Slide 2: Engine Components -->
+                                <div class="slide">
+                                    <img src="assets/one.png" alt="Engine Components and Parts" class="hero-img">
+                                </div>
+                                <!-- Slide 3: Brake System -->
+                                <div class="slide">
+                                    <img src="assets/tow.jpg" alt="Brake System Components" class="hero-img">
+                                </div>
+                                <!-- Slide 4: Car Workshop -->
+                                <div class="slide">
+                                    <img src="assets/three.jpg" alt="Professional Auto Service" class="hero-img">
+                                </div>
+                            </div>
+                            
+                            <!-- Slider Controls -->
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" id="prevBtn">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" id="nextBtn">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Slider Dots -->
+                            <div class="slider-dots">
+                                <span class="dot active" data-slide="0"></span>
+                                <span class="dot" data-slide="1"></span>
+                                <span class="dot" data-slide="2"></span>
+                                <span class="dot" data-slide="3"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <div class="card-number">500+</div>
+                        <div class="card-text">Parts Available</div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-number">24/7</div>
+                        <div class="card-text">Support</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">About ZANIA ATLANTIC</h2>
+                <p class="section-description">
+                    Wholesale export of automotive equipment to all continents. With many years of experience in export sales, Zania Atlantic offers a wide range of automotive parts. Both a distributor and an international exporter of parts for cars and trucks, Zania Atlantic enables automotive professionals to place orders and have them exported on their behalf, so they can meet the demands of their own clients worldwide, particularly in Europe and across the African continent.
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1 000+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Parts in Stock</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Car Brands Supported</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Contries Served World Wide</div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3 class="feature-card-title">Quality Assurance</h3>
+                    <p class="feature-card-description">Every part undergoes rigorous testing to meet OEM standards and exceed customer expectations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-card-title">Expert Team</h3>
+                    <p class="feature-card-description">Our experienced professionals provide technical support and guidance for all your automotive needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-card-title">Global Network</h3>
+                    <p class="feature-card-description">Partnered with manufacturers worldwide to source the best parts at competitive prices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="feature-card-title">Industry Recognition</h3>
+                    <p class="feature-card-description">Trusted by mechanics, dealerships, and car enthusiasts across the regions.</p>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div class="mission-statement">
+                <h3 class="mission-title">Our Mission</h3>
+                <p class="mission-text">
+                    To provide automotive professionals and enthusiasts with the highest quality parts, 
+                    exceptional service, and expert knowledge to keep vehicles running at their best. 
+                    We believe every car deserves premium components that ensure safety, performance, and longevity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-description">
+                    Ready to find the perfect parts for your vehicle? Get in touch with our expert team. 
+                    We're here to help with all your automotive needs.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3 class="contact-info-title">Get In Touch</h3>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-header">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h4 class="contact-card-title">Visit Our Store</h4>
+                            </div>
+                            <div class="contact-card-details">
+                                <p>Cl Travessera De Gracia Num.56 P.3 Pta.1</p>
+                                
+                                <p>Barcelona, Spain</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-header">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h4 class="contact-card-title">Call Us</h4>
+                            </div>
+                            <div class="contact-card-details">
+                                <p>+1 (555) 123-4567</p>
+                                
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-header">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h4 class="contact-card-title">Email Us</h4>
+                            </div>
+                            <div class="contact-card-details">
+                                <p>info@zaniaatlantic.com</p>
+                                <p>sales@zaniaatlantic.com</p>
+                                <p>support@zaniaatlantic.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-header">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h4 class="contact-card-title">Business Hours</h4>
+                            </div>
+                            <div class="contact-card-details">
+                                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="map-container">
+                        <h4 class="map-title">Find Us</h4>
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1065.0778298618281!2d2.14950511887321!3d41.39560469127037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29c00df34b5%3A0x493bd62031880e39!2sTravessera%20de%20Gr%C3%A0cia%2C%2056%2C%203%2C%201%2C%20Sarri%C3%A0-Sant%20Gervasi%2C%2008006%20Barcelona%2C%20Spain!5e1!3m2!1sen!2sdz!4v1757175419067!5m2!1sen!2sdz" width="350" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3 class="form-title">Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="parts-inquiry">Parts Inquiry</option>
+                                    <option value="warranty">Warranty Claim</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="bulk-order">Bulk Order</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required rows="5" placeholder="Tell us about your automotive needs..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-name">ZANIA</span>
+                        <span class="brand-subtitle">ATLANTIC</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for premium automotive parts and components. 
+                        Quality you can count on, service you can trust.
+                    </p>
+                    
+                    <!-- Contact Info -->
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Travessera de Gràcia, 56, Sarrià-Sant Gervasi, 08006 Barcelona, Spain</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@zaniaatlantic.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Company Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Auto Parts</a></li>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Warranty</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support Links -->
+                <div class="footer-section">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter">
+                <div class="newsletter-content">
+                    <h3 class="newsletter-title">Stay Updated</h3>
+                    <p class="newsletter-description">
+                        Subscribe to our newsletter for the latest parts and promotions.
+                    </p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input">
+                        <button type="button" class="newsletter-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        © 2025 ZANIA ATLANTIC SL. All rights reserved.
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/rabah-azzoug-a7461a201/?originalSubdomain=es" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
