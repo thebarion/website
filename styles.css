@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 html {
@@ -53,6 +55,7 @@ html {
     border-bottom: 1px solid var(--gray-200);
     z-index: 1000;
     transition: all 0.3s ease;
+
 }
 
 .nav-container {
@@ -63,6 +66,7 @@ html {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    
 }
 
 .nav-brand {
